@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import Helmet from 'react-helmet';
 
 import { STYLE } from './../consts';
-import Feedback from "./../components/Feedback";
+import Feedback from "./Feedback";
 import Header from "./header";
 import Footer from "./footer";
 
