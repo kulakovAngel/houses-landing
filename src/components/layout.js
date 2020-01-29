@@ -13,7 +13,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${STYLE.FONT_FAMILY};
+}
+body {
+    overflow-x: hidden;
 }
 html,
 body,
@@ -34,18 +37,19 @@ h3 { font-size: 36px; }
 h4, input { font-size: 28px; }
 h5 { font-size: 26px; }
 h6 { font-size: 24px; }
-p { line-height: 1.6rem; font-weight: 100; }
+p, form, input, textarea { line-height: 1.6rem; font-weight: 100; font-size: 24px; }
 `;
 const Main = styled.main`flex: 1 1 auto;`;
 
 
-const Layout = ({ children }) => {
+const Layout = ({ seo = {}, children }) => {
+    seo.title = seo.title ? ' - ' + seo.title : '';
     return (
         <>
             <Helmet>
-                <title>Houses for sale</title>
-                <meta name='description' content='Houses for sale' />
-                <meta name='keywords' content='Houses, Hrodno' />
+                <title>{ `Houses for sale${seo.title}` }</title>
+                <meta name='description' content={seo.description} />
+                <meta name='keywords' content={seo.keywords} />
             </Helmet>
             <GlobalStyle />
             <Header />

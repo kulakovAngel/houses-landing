@@ -30,7 +30,7 @@ transition : all 0.3s ease-out;
 `;
 
 
-const Blob = ({ size, top, left, color1, color2 }) => {
+const Blob = ({ size, top, left, bottom, right, color1, color2 }) => {
     return (
         <StyledBlob
             size={ size || 200 }

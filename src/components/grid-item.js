@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import { STYLE } from "./../consts";
+
+console.log(STYLE.BP_MOBILE);
 const StyledGridItem = styled.div`
     display: flex;
     justify-content: stretch;
@@ -11,10 +14,10 @@ const StyledGridItem = styled.div`
         justify-content: stretch;
         align-items: stretch;
     }
-    @media (max-width: 768px) {
+    ${STYLE.BP_MOBILE} {
         grid-column: span 12;
     }
-    @media (min-width: 769px) {
+    ${STYLE.BP_DESKTOP} {
         grid-column: span ${props => props.col};
     }
 `;

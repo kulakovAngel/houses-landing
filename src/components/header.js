@@ -26,7 +26,7 @@ const Header = () => (
     <StyledHeader>
         <Blob
             size={ 350 }
-            top='50%'
+            top='45%'
             left='20%'
             color1={ STYLE.BACKGROUND_1+'44' }
             color2={ STYLE.BACKGROUND_2+'bb' }
@@ -40,7 +40,7 @@ const Header = () => (
             />
         <Blob
             size={ 250 }
-            top='85%'
+            top='65%'
             left='80%'
             color1={ STYLE.BACKGROUND_1+'aa' }
             color2={ STYLE.BACKGROUND_2+'44' }

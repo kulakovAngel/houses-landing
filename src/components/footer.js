@@ -1,17 +1,39 @@
 import React from "react";
 import styled from "styled-components";
 
+import { STYLE } from './../consts';
+
 const StyledFooter = styled.footer`
-    background: #242943;
-    display: flex;
+background: #242943;
+display: flex;
+border-top: 1px solid ${STYLE.BACKGROUND_1};
+${STYLE.BP_MOBILE} {
+    flex-direction: column;
+}
+${STYLE.BP_DESKTOP} {
+    flex-direction: row;
+}
 `;
 const Section = styled.section`
-    flex: 0 0 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0;
+flex: 0 0 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 100px 0;
+${STYLE.BP_MOBILE} {
+    grid-column: span 12;
+    &:not(:last-child) {
+        border-bottom: 1px solid ${STYLE.BACKGROUND_1};
+        
+    }
+}
+${STYLE.BP_DESKTOP} {
+    grid-column: span ${props => props.col};
+    &:not(:last-child) {
+        border-right: 1px solid ${STYLE.BACKGROUND_1};
+    }
+}
 `;
 
 

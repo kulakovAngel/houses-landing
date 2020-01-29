@@ -8,14 +8,26 @@ import { STYLE } from './../consts';
 const StyledFeedback = styled.div`
 background: ${STYLE.BACKGROUND_2};
 display: flex;
+${STYLE.BP_MOBILE} {
+    flex-direction: column;
+    & > *:not(:last-child) {
+        border-bottom: 1px solid ${STYLE.BACKGROUND_1};
+    }
+}
+${STYLE.BP_DESKTOP} {
+    flex-direction: row;
+    & > *:not(:last-child) {
+        border-right: 1px solid ${STYLE.BACKGROUND_1};
+    }
+}
 & > * {
-    flex: 1 1 auto;
-    border: 1px solid ${STYLE.BACKGROUND_1};
-}    
+    flex: 1 1 50%;
+}
 `;
 const Form = styled.form`
 display: flex;
 flex-direction: column;
+padding: ${STYLE.GAP_3};
 `;
 const Input = styled.input`
 background: inherit;
@@ -25,6 +37,8 @@ padding: ${STYLE.GAP_1};
 margin: ${STYLE.GAP_2};
 outline: none;
 color: inherit;
+
+&:focus { border: 1px solid; }
 
 &::-moz-placeholder { color: ${STYLE.COLOR_2}; }
 &::-webkit-input-placeholder { color: ${STYLE.COLOR_2}; }
@@ -45,10 +59,10 @@ const Li = styled.li`
 display: flex;
 flex-direction: column;
 list-style-type: none;
+padding: ${STYLE.GAP_3};
 &:not(:last-child) {
     border-bottom: 1px solid ${STYLE.BACKGROUND_1};
 }
-padding: ${STYLE.GAP_3};
 `;
 const Header = styled.header`
 display: flex;
@@ -58,6 +72,9 @@ display: flex;
 `;
 const H4 = styled.h4`
 margin: 0 ${STYLE.GAP_1};
+`;
+const FormHeading = styled.h4`
+text-align: center;
 `;
 
 export const fluidImage = graphql`
@@ -87,6 +104,7 @@ const Feedback = () => {
     return (
         <StyledFeedback>
             <Form data-netlify='true' name='houses_feedback'>
+                <FormHeading>Feedback Form</FormHeading>
                 <input type='hidden' name='form-name' value='houses_feedback' />
                 <Input type='text' placeholder='Name*' name='name' />
                 <Input type='tel' placeholder='Phone*' name='phone' />

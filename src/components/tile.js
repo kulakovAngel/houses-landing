@@ -29,6 +29,7 @@ flex: 1 1 auto;
 }
 &:hover > * {
     background: ${props => props.color}dd;
+    box-shadow: 0px 0px 6px 6px ${props => props.color}dd;
 }
 `;
 const H2 = styled.h2`
