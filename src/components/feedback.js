@@ -86,10 +86,11 @@ const Feedback = () => {
   `);
     return (
         <StyledFeedback>
-            <Form>
-                <Input placeholder='Name*' />
-                <Input placeholder='Phone*' />
-                <Input as='textarea' placeholder='Message*' />
+            <Form data-netlify='true' name='houses_feedback'>
+                <input type='hidden' name='form-name' value='houses_feedback' />
+                <Input type='text' placeholder='Name*' name='name' />
+                <Input type='tel' placeholder='Phone*' name='phone' />
+                <Input as='textarea' placeholder='Message*' name='message' />
                 <Input type='submit' />
             </Form>
             <div>
