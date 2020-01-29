@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import { STYLE } from './../consts';
-import Blob from "./Blob";
-import NavBar from "./NavBar";
+import Blob from "./blob";
+import NavBar from "./navbar";
 
 
 import house from '../images/house.jpg';
