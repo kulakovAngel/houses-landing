@@ -1,15 +1,15 @@
 import React from "react";
 import Fade from 'react-reveal/Fade';
 
-import Layout from "../components/layout";
-import Grid from "../components/grid";
-import GridItem from "../components/grid-item";
-import Tile from "../components/tile";
+import Layout from "./../components/layout";
+import Grid from "./../components/grid";
+import GridItem from "./../components/grid-item";
+import Tile from "./../components/tile";
 
-import house1 from '../images/house-1.jpg';
-import house2 from '../images/house-2.jpg';
-import house3 from '../images/house-3.jpg';
-import house4 from '../images/house-4.jpg';
+import house1 from './../images/house-1.jpg';
+import house2 from './../images/house-2.jpg';
+import house3 from './../images/house-3.jpg';
+import house4 from './../images/house-4.jpg';
 
 const items = [{
     img: house1,

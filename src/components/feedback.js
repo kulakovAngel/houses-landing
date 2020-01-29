@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { STYLE } from '../consts';
+import { STYLE } from './../consts';
 
 const StyledFeedback = styled.div`
 background: ${STYLE.BACKGROUND_2};

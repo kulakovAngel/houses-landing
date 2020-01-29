@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { STYLE } from '../consts';
+import { STYLE } from './../consts';
 import Blob from "./Blob";
 import NavBar from "./NavBar";
 

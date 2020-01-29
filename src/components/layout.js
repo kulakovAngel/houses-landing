@@ -2,8 +2,8 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Helmet from 'react-helmet';
 
-import { STYLE } from '../consts';
-import Feedback from "../components/Feedback";
+import { STYLE } from './../consts';
+import Feedback from "./../components/Feedback";
 import Header from "./header";
 import Footer from "./footer";
 

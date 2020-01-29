@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import Layout from "../components/layout";
+import Layout from "./../components/layout";
 
 const P = styled.p`
 margin: 128px 128px 0 40%;
